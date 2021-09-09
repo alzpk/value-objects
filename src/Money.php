@@ -37,7 +37,7 @@ final class Money implements ValueObject
      */
     public function isSame(ValueObject $object): bool
     {
-        return $this->currency === $object->currency
-            && $this->amount === $object->amount;
+        return $this->currency === $object->getCurrency()
+            && $this->amount === $object->getAmount();
     }
 }
