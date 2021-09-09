@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Alzpk\ValueObjets\Tests;
 
 use Alzpk\ValueObjets\Money;
+use Alzpk\ValueObjets\ValueObject;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
@@ -15,6 +16,7 @@ final class MoneyTest extends TestCase
     {
         $money = new Money(1000, 'DKK');
 
+        $this->assertInstanceOf(ValueObject::class, $money);
         $this->assertSame(1000, $money->getAmount());
         $this->assertSame('DKK', $money->getCurrency());
     }
