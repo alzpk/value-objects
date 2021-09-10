@@ -21,6 +21,15 @@ final class MoneyTest extends TestCase
     }
 
     /** @test */
+    public function it_can_get_amount_as_float()
+    {
+        $money = new Money(125, 'USD');
+
+        $this->assertInstanceOf(Money::class, $money);
+        $this->assertSame(1.25, $money->getAmountAsFloat());
+    }
+
+    /** @test */
     public function it_can_validate_that_two_money_objects_has_the_same_currency()
     {
         $moneyA = new Money(1100, 'DKK');
