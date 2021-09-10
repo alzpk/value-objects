@@ -3,7 +3,6 @@
 namespace Alzpk\ValueObjets\Tests;
 
 use Alzpk\ValueObjets\Email;
-use Alzpk\ValueObjets\ValueObject;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
@@ -14,7 +13,7 @@ class EmailTest extends TestCase
     {
         $email = new Email('test@example.com');
 
-        $this->assertInstanceOf(ValueObject::class, $email);
+        $this->assertInstanceOf(Email::class, $email);
         $this->assertSame('test@example.com', $email->getEmail());
     }
 

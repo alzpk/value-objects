@@ -3,7 +3,6 @@
 namespace Alzpk\ValueObjets\Tests;
 
 use Alzpk\ValueObjets\Address;
-use Alzpk\ValueObjets\ValueObject;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
@@ -21,7 +20,7 @@ class AddressTest extends TestCase
             'Danmark'
         );
 
-        $this->assertInstanceOf(ValueObject::class, $address);
+        $this->assertInstanceOf(Address::class, $address);
         $this->assertSame('Testvej', $address->getStreet());
         $this->assertSame('1337', $address->getHouseNumber());
         $this->assertSame('Esbjerg', $address->getCity());
@@ -42,7 +41,7 @@ class AddressTest extends TestCase
             'Danmark'
         );
 
-        $this->assertInstanceOf(ValueObject::class, $address);
+        $this->assertInstanceOf(Address::class, $address);
         $this->assertSame('Testvej', $address->getStreet());
         $this->assertSame('1337', $address->getHouseNumber());
         $this->assertSame('Esbjerg', $address->getCity());
