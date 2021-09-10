@@ -43,37 +43,69 @@ class Address implements ValueObject
         $this->country = $country;
     }
 
+    /**
+     * Returns street as string
+     *
+     * @return string
+     */
     public function getStreet(): string
     {
         return $this->street;
     }
 
+    /**
+     * Returns city as string
+     *
+     * @return string
+     */
     public function getCity(): string
     {
         return $this->city;
     }
 
+    /**
+     * Returns zip as string
+     *
+     * @return string
+     */
     public function getZip(): string
     {
         return $this->zip;
     }
 
+    /**
+     * Returns region as string
+     *
+     * @return string
+     */
     public function getRegion(): string
     {
         return $this->region;
     }
 
+    /**
+     * Returns country as string
+     *
+     * @return string
+     */
     public function getCountry(): string
     {
         return $this->country;
     }
 
+    /**
+     * Returns house number as string
+     *
+     * @return string
+     */
     public function getHouseNumber(): string
     {
         return $this->houseNumber;
     }
 
     /**
+     * Returns true/false, based on a complete match of the two objects
+     *
      * @param Address $object
      * @return bool
      */
