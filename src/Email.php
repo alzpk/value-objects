@@ -17,12 +17,19 @@ class Email implements ValueObject
         $this->email = $email;
     }
 
+    /**
+     * Returns email as string
+     *
+     * @return string
+     */
     public function getEmail(): string
     {
         return $this->email;
     }
 
     /**
+     * Returns true/false, based on a complete match of the two objects
+     *
      * @param Email $object
      * @return bool
      */
