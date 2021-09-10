@@ -31,6 +31,29 @@ final class Money implements ValueObject
         return $this->currency;
     }
 
+    public function hasSameCurrency(Money $money): bool
+    {
+        return $this->currency === $money->getCurrency();
+    }
+
+    public function add(Money $money): self
+    {
+        if (!$this->hasSameCurrency($money)) {
+            throw new InvalidArgumentException('You can only add values with the same currency.');
+        }
+
+        return new self($this->amount + $money->getAmount(), $this->currency);
+    }
+
+    public function subtract(Money $money): self
+    {
+        if (!$this->hasSameCurrency($money)) {
+            throw new InvalidArgumentException('You can only subtract values with the same currency.');
+        }
+
+        return new self($this->amount - $money->getAmount(), $this->currency);
+    }
+
     /**
      * @param Money $object
      * @return bool
