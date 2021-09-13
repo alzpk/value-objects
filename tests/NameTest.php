@@ -44,4 +44,22 @@ class NameTest extends TestCase
 
         new Name('John', '');
     }
+
+    /** @test */
+    public function it_can_validate_email_objects_are_the_same()
+    {
+        $nameA = new Name('John', 'Doe');
+        $nameB = new Name('John', 'Doe');
+
+        $this->assertTrue($nameA->isSame($nameB));
+    }
+
+    /** @test */
+    public function it_can_validate_email_objects_arent_the_same()
+    {
+        $nameA = new Name('John', 'Doe');
+        $nameB = new Name('Ben', 'Johnson');
+
+        $this->assertFalse($nameA->isSame($nameB));
+    }
 }
