@@ -6,8 +6,8 @@ use InvalidArgumentException;
 
 class Name implements ValueObject
 {
-    private $firstname;
-    private $lastname;
+    private string $firstname;
+    private string $lastname;
 
     public function __construct(string $firstname, string $lastname)
     {
