@@ -24,7 +24,7 @@ $name = new Alzpk\ValueObjets\Name('John', 'Doe');
 
 $name->getFirstname(); // Returns "John"
 $name->getLastname(); // Returns "Doe"
-$name->getFullName(); // Return "John Doe"
+$name->getFullName(); // Returns "John Doe"
 ```
 
 ## Testing
