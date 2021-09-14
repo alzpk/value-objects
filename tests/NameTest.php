@@ -11,20 +11,20 @@ class NameTest extends TestCase
     /** @test */
     public function it_can_create_an_name_object()
     {
-        $email = new Name('John', 'Doe');
+        $name = new Name('John', 'Doe');
 
-        $this->assertInstanceOf(Name::class, $email);
-        $this->assertSame('John', $email->getFirstname());
-        $this->assertSame('Doe', $email->getLastname());
+        $this->assertInstanceOf(Name::class, $name);
+        $this->assertSame('John', $name->getFirstname());
+        $this->assertSame('Doe', $name->getLastname());
     }
 
     /** @test */
     public function it_can_get_full_name_from_name_object()
     {
-        $email = new Name('John', 'Doe');
+        $name = new Name('John', 'Doe');
 
-        $this->assertInstanceOf(Name::class, $email);
-        $this->assertSame('John Doe', $email->getFullName());
+        $this->assertInstanceOf(Name::class, $name);
+        $this->assertSame('John Doe', $name->getFullName());
     }
 
     /** @test */
